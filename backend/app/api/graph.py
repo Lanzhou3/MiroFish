@@ -554,7 +554,7 @@ def list_tasks():
     
     return jsonify({
         "success": True,
-        "data": [t.to_dict() for t in tasks],
+        "data": tasks,  # list_tasks() 已经返回字典列表
         "count": len(tasks)
     })
 
